@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 from env import host, username, password, get_db_url
+from sklearn.model_selection import train_test_split
 
 
 def titanic():
@@ -81,3 +82,4 @@ def get_telco_data():
         df = pd.read_sql(sql,get_db_url('telco_churn'))
         df.to_csv('telco.csv')
         return df
+   
